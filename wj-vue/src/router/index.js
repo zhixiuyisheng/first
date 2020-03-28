@@ -86,6 +86,15 @@ export default new Router({
           }
         }
       ]
+    },
+    {
+      path: '/coursedetail',
+      meta: {
+        title: '课程详情',
+        noCache: true
+      },
+      component: () => import('@/components/course/index'),
+      hidden: true
     }
   ]
 })

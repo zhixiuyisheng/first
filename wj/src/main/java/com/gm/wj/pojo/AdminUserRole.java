@@ -1,14 +1,12 @@
 package com.gm.wj.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Data;
 
 import javax.persistence.*;
 
-/**
- * @author Evan
- * @date 2019/11
- */
 
+@Data
 @Entity
 @Table(name = "admin_user_role")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
@@ -21,27 +19,4 @@ public class AdminUserRole {
     private int uid;
     private int rid;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getUid() {
-        return uid;
-    }
-
-    public void setUid(int uid) {
-        this.uid = uid;
-    }
-
-    public int getRid() {
-        return rid;
-    }
-
-    public void setRid(int rid) {
-        this.rid = rid;
-    }
 }
